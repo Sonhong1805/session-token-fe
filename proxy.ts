@@ -30,6 +30,14 @@ export function proxy(request: NextRequest) {
   return NextResponse.next();
 }
 
+export const config = {
+  matcher: [
+    "/account/:path*",
+  ],
+};
+
+
+
 /**
  * NGUYÊN NHÂN refreshToken undefined trên Vercel:
  * 
