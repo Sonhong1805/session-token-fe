@@ -77,11 +77,6 @@ const FormLogin = () => {
                   <FormLabel htmlFor="password" className="text-base font-medium">
                     Mật khẩu
                   </FormLabel>
-                  <Link
-                    href="/forgot-password"
-                    className="text-sm text-primary hover:underline font-medium transition-colors">
-                    Quên mật khẩu?
-                  </Link>
                 </div>
                 <FormControl>
                   <div className="relative">
