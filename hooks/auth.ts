@@ -52,22 +52,6 @@ export const useRegister = () => {
   });
 };
 
-export const useVerifyOtp = () => {
-  const router = useRouter();
-
-  return useMutation({
-    mutationFn: authService.verifyOtp,
-    onSuccess: () => {
-      toast.success("Xác thực tài khoản thành công!");
-      router.push("/login" as any);
-    },
-    onError: (err: any) => {
-      const message = err?.message || "Mã OTP không hợp lệ";
-      toast.error(message);
-    },
-  });
-};
-
 export const useLogout = () => {
   const router = useRouter();
   const logout = useUserStore((s) => s.logout);

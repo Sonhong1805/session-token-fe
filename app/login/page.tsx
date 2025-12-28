@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   Card,
   CardDescription,
@@ -18,7 +19,9 @@ const LoginPage = () => {
             Nhập thông tin đăng nhập để truy cập vào tài khoản của bạn
           </CardDescription>
         </CardHeader>
-        <FormLogin />
+        <Suspense fallback={<div className="p-6">Đang tải...</div>}>
+          <FormLogin />
+        </Suspense>
       </Card>
     </div>
   );
